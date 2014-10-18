@@ -12,6 +12,8 @@ CodebuddiesRails::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
      resources :events
+     root :to =>   'pages#home'
+
 
   # Sample resource route with options:
   #   resources :products do
