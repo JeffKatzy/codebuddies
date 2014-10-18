@@ -34,7 +34,7 @@ group :development do
   gem 'foreman'
   gem 'annotate'
   gem 'pry-rails'
-  gem 'pry-debugger'
+  gem 'pry-byebug'
   gem 'pry-stack_explorer'
   gem 'quiet_assets'
   gem 'better_errors'
