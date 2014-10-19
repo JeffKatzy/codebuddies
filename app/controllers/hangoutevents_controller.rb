@@ -1,5 +1,6 @@
 class HangouteventsController < ApplicationController
 	def index
+		@event = Hangoutevent.all
 	end
 
 	def new
@@ -7,6 +8,7 @@ class HangouteventsController < ApplicationController
 	end
 
 	def create
+		# Hangoutevent.create(params[:hangoutevent])
 		Hangoutevent.create(hangoutevent_params)
 		redirect_to hangoutevents_path
 	end
@@ -20,6 +22,7 @@ class HangouteventsController < ApplicationController
 	private
 
 	def hangoutevent_params
-		params.require(:title).permit(:start_date_day, :start_date_time, :description)
+		params.require(:hangoutevent).permit(:title, :start_date, :start_date_time, :description)
+		# params.permit(:title, :start_date_day, :start_date_time, :description)
 	end
 end
