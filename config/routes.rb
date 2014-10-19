@@ -12,7 +12,7 @@ CodebuddiesRails::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
      resources :hangoutevents
-     root :to =>   'pages#home'
+     root :to =>   'hangoutevents#index'
 
   # Sample resource route with options:
   #   resources :products do
