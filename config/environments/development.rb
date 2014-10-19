@@ -36,6 +36,6 @@ CodebuddiesRails::Application.configure do
   config.assets.debug = true
 
   # Raises an error on unpermitted attributes assignment
-  config.action_controller.action_on_unpermitted_parameters = :raise  # default is :log
+  # config.action_controller.action_on_unpermitted_parameters = :log  # default is :log
   
 end
