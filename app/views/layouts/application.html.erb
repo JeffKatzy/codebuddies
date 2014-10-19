@@ -6,7 +6,21 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+<header>
+	<div class="left-nav">
+		<ul>
+			<li><%= link_to "Home", hangoutevents_path%></li>
+		</ul>
+	</div>
+	<div class="right-nav">
+		<ul>
+			<li><%= link_to "Propose Hangout", new_hangoutevent_path%></li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+</header>
 
 <%= yield %>
 
