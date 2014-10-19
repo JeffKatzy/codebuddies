@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+#gem 'rails', '~> 4.1.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,6 +15,7 @@ gem 'pry-nav'
 gem 'jquery-rails'
 gem 'multiparameter_date_time'
 gem 'bootstrap-datepicker-rails'
+gem 'strong_parameters'
 
 
 # Gems used only for assets and not required
