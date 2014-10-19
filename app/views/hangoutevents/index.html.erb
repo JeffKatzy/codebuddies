@@ -3,4 +3,6 @@
 	<h3><%= event.title%></h3>
 	<p><%= event.description%></p>
 	<p><%= event.start_date %></p>
+	<h5 id="edit"><%= link_to "Edit Hangout", edit_hangoutevent_path(event) %></h5>
+	<h5 id="delete"><%= link_to "Delete Hangout", event, method: :delete %></h5>
 <% end %>
