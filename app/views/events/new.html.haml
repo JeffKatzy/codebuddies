@@ -3,7 +3,7 @@
 		= form.label :title, "name"
 		= form.input :title
 	.row
-		= form.input :start_date_day, as: :date, start_year: Date.today.year, end_year: Date.today.year + 1, order: [:month, :year, :day]
+		= form.input :start_date_day, as: :date, start_year: Date.today.year, end_year: Date.today.year + 1, order: [:day, :month, :year]
 	.row
 		= form.label :start_date_time, "Time available"
 		= form.select("time_open", {"11:30 am" => "11:30 am", "12:30 pm" => "12:30 pm"})
