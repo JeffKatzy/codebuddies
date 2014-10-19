@@ -18,7 +18,7 @@
 #
 
 class Hangoutevent < ActiveRecord::Base
-  attr_accessible :end_date, :end_date_day, :end_date_time, :language, :level, :start_date, :start_date_day, :start_date_time, :title
+  attr_accessible :end_date, :end_date_day, :end_date_time, :language, :level, :start_date, :start_date_day, :start_date_time, :title, :description
 
   after_create :create_google_calendar_event
 
