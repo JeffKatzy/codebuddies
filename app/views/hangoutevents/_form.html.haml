@@ -1,0 +1,32 @@
+<h1>Propose A New Hangout</h1>
+
+/ t.string   "title"
+/     t.datetime "start_date"
+/     t.datetime "end_date"
+/     t.string   "start_date_day"
+/     t.string   "start_date_time"
+/     t.string   "end_date_day"
+/     t.string   "end_date_time"
+/     t.integer  "language_id"
+/     t.string   "level"
+/     t.datetime "created_at",      :null => false
+/     t.datetime "updated_at",      :null => false
+/     t.text     "description"
+
+= simple_form_for @event do |form|
+	.row		
+		= form.input :title
+	.row
+		= form.input :start_date, as: :date, start_year: Date.today.year, end_year: Date.today.year + 1, order: [:month, :day, :year]
+	.row
+		= form.label :start_date_time, "Start Time:"
+		= form.select("start_date_time", {"11:30 am" => "11:30 am", "12:30 pm" => "12:30 pm"})
+	.row
+		= form.input :description
+	.row
+		.actions
+		= form.submit 'Propose Hangout', class: 'green button large padded fixed center'
+	
+%br
+%br
+%br
