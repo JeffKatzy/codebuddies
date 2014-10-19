@@ -14,7 +14,6 @@ CodebuddiesRails::Application.routes.draw do
      resources :hangoutevents
      root :to =>   'pages#home'
 
-
   # Sample resource route with options:
   #   resources :products do
   #     member do
