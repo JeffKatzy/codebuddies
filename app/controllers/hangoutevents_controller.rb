@@ -17,19 +17,22 @@ class HangouteventsController < ApplicationController
 	end
 
 	def show
+		redirect_to hangoutevents_path
 	end
 
 	def destroy
+		@event = Hangoutevent.find(params[:id])
+		@event.destroy
+		redirect_to hangoutevents_path
 	end
 
 	def edit
-		
+		@event = Hangoutevent.find(params[:id])
 	end
 
-	private
-
-	# def hangoutevent_params
-	# 	params.require(:hangoutevent).permit(:title, :start_date, :start_date_time, :description)
-	# 	# params.permit(:title, :start_date_day, :start_date_time, :description)
-	# end
+	def update
+		@event = Hangoutevent.find(params[:id])
+		@event.update_attributes(params[:hangoutevent])
+		redirect_to hangoutevents_path
+	end
 end
